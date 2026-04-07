@@ -38,4 +38,4 @@
 
 ---
 
-![Fork 历史趋势图。](https://commit.cool/forks/实际项目地址?interval=day)
+![Fork 历史趋势图。](https://commit.cool/forks/chief985/For_course/Computer_simulation_experiment?interval=day)
