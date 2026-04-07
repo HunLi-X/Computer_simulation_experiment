@@ -8,3 +8,8 @@ syms m_sym n_sym;
 m_sym = sym(50); 
 n_sym = sym(10);
 C_sym = factorial(m_sym) / (factorial(n_sym) * factorial(m_sym - n_sym));
+
+% --- 3. 结果比较 ---
+fprintf('数值方法结果 (双精度会有误差): %f\n', C_num);
+disp('符号运算方法结果 (完全精确无损):');
+disp(C_sym);
