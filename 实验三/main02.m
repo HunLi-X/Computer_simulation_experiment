@@ -114,7 +114,11 @@ if ~isempty(Z_rational)
     fprintf('验证每个基础解系向量是否满足 A*ξ = 0:\n');
     for i = 1:size(Z_rational, 2)
         residual = norm(A * Z_rational(:, i));
-        status = '✓' if residual < 1e-10 else '✗';
+        if residual < 1e-10
+            status = '✓';
+        else
+            status = '✗';
+        end
         fprintf('  A*ξ%d = 0 ? ||A*ξ%d|| = %.2e %s\n', i, i, residual, status);
     end
 end
