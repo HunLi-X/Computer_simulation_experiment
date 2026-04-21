@@ -1,3 +1,4 @@
+clc;
 syms t s alpha real
 
 % 定义函数

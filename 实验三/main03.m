@@ -6,7 +6,7 @@ function dxy = lotka_volterra(t, xy)
     dydt = x*y - 3*y;
     dxy = [dxdt; dydt];
 end
-
+clc;
 % 设置时间区间和初始条件
 tspan = [0 10]; % 求解时间范围，可根据需要调整
 xy0 = [2; 3];   % 初始条件 [x(0); y(0)]
