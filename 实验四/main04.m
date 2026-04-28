@@ -4,6 +4,12 @@ G_s = ((s+1)^2 * (s^2 + 2*s + 400)) / ((s+5)^2 * (s^2 + 3*s + 100) * (s^2 + 3*s 
 Ts_list = [0.01, 0.1, 1];
 figure; hold on;
 
+% 设置全局字体为 MiSans
+set(0, 'DefaultAxesFontName', 'MiSans');
+set(0, 'DefaultTextFontName', 'MiSans');
+set(0, 'DefaultAxesFontSize', 12);
+set(0, 'DefaultTextFontSize', 12);
+
 % 绘制连续系统阶跃响应
 [y_c, t_c] = step(G_s);
 plot(t_c, y_c, 'k', 'LineWidth', 2);
@@ -21,5 +27,6 @@ legend('连续系统', 'T=0.01s', 'T=0.1s', 'T=1s');
 title('不同采样周期下的离散化阶跃响应比较');
 xlabel('时间 (s)');
 ylabel('幅值');
+xlim([0 5]);
 grid on;
 hold off;
