@@ -3,7 +3,7 @@
 本仓库是计算机仿真课程实验代码与结果汇总，主要使用 MATLAB 完成基础建模、数值计算、图形绘制与控制系统分析。
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2023a+-orange)
-![实验数](https://img.shields.io/badge/实验-4-blue)
+![实验数](https://img.shields.io/badge/实验-5-blue)
 ![状态](https://img.shields.io/badge/状态-持续更新-green)
 
 ## 项目目标
@@ -34,6 +34,10 @@
 └─ 实验四/
    ├─ README.md
    ├─ main01.m ~ main04.m
+   └─ res/
+├─ 实验五/
+   ├─ README.md
+   ├─ main01.m ~ main03.m
    └─ res/
 ```
 
@@ -76,6 +80,14 @@
 
 详情见：`实验四/README.md`
 
+### 实验五：状态空间分析与离散化
+
+- 自治系统状态方程解析解与数值解比较
+- 5阶状态空间模型单位阶跃响应分析
+- 连续传递函数在不同采样周期下的离散化及误差分析
+
+详情见：`实验五/README.md`
+
 ## 运行环境
 
 - MATLAB R2023a 或更高版本
@@ -100,6 +112,9 @@ main02
 
 cd ../实验四
 main04
+
+cd ../实验五
+main01
 ```
 
 3. 查看各实验目录下的 `res/` 截图和 `README.md` 说明。
