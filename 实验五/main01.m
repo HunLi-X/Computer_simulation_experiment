@@ -12,7 +12,7 @@ A = [-5  2  0  0;
 x0 = [1; 2; 0; 1];
 
 %% ============ 方法一：解析解 x(t) = expm(A*t) * x0 ============
-t_span = 0:0.01:5;   % 时间范围
+t_span = 0:0.01:5;
 
 % 计算解析解（逐时刻用矩阵指数）
 x_exact = zeros(4, length(t_span));
@@ -30,7 +30,7 @@ titles = {'x_1(t)', 'x_2(t)', 'x_3(t)', 'x_4(t)'};
 
 for i = 1:4
     subplot(2, 2, i);
-    plot(t_span, x_exact(i, '-', 'LineWidth', 2); hold on;
+    plot(t_span, x_exact(i, :), 'b-', 'LineWidth', 2); hold on;
     plot(t_num, x_num(:, i), 'ro', 'MarkerSize', 4, 'MarkerIndices', 1:10:length(t_num));
     xlabel('时间 t / s');
     ylabel(titles{i});

@@ -1,6 +1,4 @@
-%% 实验二：绘制状态方程模型的单位阶跃响应曲线
-%  dx/dt = A*x + B*u,  y = C*x + D*u
-
+%% 实验二：状态方程模型的单位阶跃响应
 clc; clear; close all;
 
 %% 定义系统矩阵
@@ -19,19 +17,18 @@ D = 0;
 %% 建立状态空间模型
 sys = ss(A, B, C, D);
 
-%% 绘制单位阶跃响应
-figure('Name', '单位阶跃响应', 'Position', [100 100 800 500]);
-step(sys, 10);   % 仿真 10 秒
-title('状态方程模型的单位阶跃响应', 'FontSize', 14);
+%% 绘制输出 y(t) 的单位阶跃响应
+figure('Name', '输出阶跃响应', 'Position', [100 100 800 400]);
+step(sys, 35);
+title('状态方程模型的单位阶跃响应 y(t)', 'FontSize', 14);
 xlabel('时间 t / s', 'FontSize', 12);
-ylabel('输出 y(t)', 'FontSize', 12);
+ylabel('y(t)', 'FontSize', 12);
 grid on;
 
-%% 也可以查看各状态变量的阶跃响应
+%% 查看各状态变量的阶跃响应
 figure('Name', '各状态变量阶跃响应', 'Position', [100 100 900 600]);
 
-% 求状态变量的阶跃响应
-t = 0:0.01:10;
+t = 0:0.01:35;
 [y_step, t_step, x_step] = step(sys, t);
 
 subplot(2,1,1);
@@ -41,8 +38,10 @@ title('输出 y(t) 的阶跃响应');
 grid on;
 
 subplot(2,1,2);
+% x_step 的维度为 [length(t), 1, 5]，需要 squeeze 降维
+x_2d = squeeze(x_step);  % 变为 [length(t) x 5]
 for i = 1:5
-    plot(t_step, x_step(:,:,i), 'LineWidth', 1.5); hold on;
+    plot(t_step, x_2d(:, i), 'LineWidth', 1.5); hold on;
 end
 xlabel('时间 t / s'); ylabel('状态变量');
 title('各状态变量的阶跃响应');
