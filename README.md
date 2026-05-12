@@ -3,7 +3,7 @@
 本仓库是计算机仿真课程实验代码与结果汇总，主要使用 MATLAB 完成基础建模、数值计算、图形绘制与控制系统分析。
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2023a+-orange)
-![实验数](https://img.shields.io/badge/实验-5-blue)
+![实验数](https://img.shields.io/badge/实验-6-blue)
 ![状态](https://img.shields.io/badge/状态-持续更新-green)
 
 ## 项目目标
@@ -36,6 +36,10 @@
    ├─ main01.m ~ main04.m
    └─ res/
 ├─ 实验五/
+│  ├─ README.md
+│  ├─ main01.m ~ main03.m
+│  └─ res/
+└─ 实验六/
    ├─ README.md
    ├─ main01.m ~ main03.m
    └─ res/
@@ -88,6 +92,15 @@
 
 详情见：`实验五/README.md`
 
+### 实验六：根轨迹与频域分析
+
+- 状态方程系统根轨迹与稳定增益范围求解
+- 关于参数 a 的根轨迹绘制与稳定区间搜索
+- 带纯延迟系统的 Bode 图、Nyquist 图与稳定性判定
+- 连续系统与离散系统的频域裕度分析
+
+详情见：`实验六/README.md`
+
 ## 运行环境
 
 - MATLAB R2023a 或更高版本
@@ -114,6 +127,9 @@ cd ../实验四
 main04
 
 cd ../实验五
+main01
+
+cd ../实验六
 main01
 ```
 

@@ -4,11 +4,7 @@
 %   G(s) = --------------------------------------
 %            s^2 (s^2 + 3s + 4.32) (s + a)
 %
-% 闭环特征方程: s^2(s^2+3s+4.32)(s+a) + 0.3(s+2)(s^2+2.1s+2.23) = 0
-% 改写为: P(s) + a*Q(s) = 0, 即 1 + a*Q(s)/P(s) = 0
-%
-% P(s) = s^3(s^2+3s+4.32) + 0.3(s+2)(s^2+2.1s+2.23)
-% Q(s) = s^2(s^2+3s+4.32)
+% 闭环特征方程改写为: P(s) + a*Q(s) = 0, 即 1 + a*Q(s)/P(s) = 0
 
 clear; clc; close all;
 
@@ -44,9 +40,7 @@ stab_flag = false(size(a_vec));
 
 for i = 1:length(a_vec)
     a = a_vec(i);
-    % 分母: s^2(s^2+3s+4.32)(s+a)
     den_full = conv(conv([1 0 0], [1 3 4.32]), [1 a]);
-    % 分子: 0.3(s+2)(s^2+2.1s+2.23)
     num_full = 0.3 * conv([1 2], [1 2.1 2.23]);
 
     L = max(length(den_full), length(num_full));

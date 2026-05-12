@@ -1,7 +1,7 @@
 %% 实验三：带延迟系统的频域分析
 clc; clear; close all;
 
-%% ========== 第1部分: 连续系统 G(s) ==========
+%% 第1部分: 连续系统 G(s)
 fprintf('========== 第1部分: 连续系统 G(s) ==========\n');
 
 s = tf('s');
@@ -13,8 +13,8 @@ G_rat = G_num / G_den;
 
 % 加入延迟 e^{-3s}
 tau = 3;
-G_pade  = pade(G_rat * exp(-tau*s), 10);  % 10阶Pade近似(用于闭环极点计算)
-G_exact = G_rat * exp(-tau*s);            % 精确延迟(用于频域分析)
+G_pade  = pade(G_rat * exp(-tau*s), 10);  % 10阶Pade近似
+G_exact = G_rat * exp(-tau*s);
 
 % 计算裕度
 [Gm, Pm, Wcg, Wcp] = margin(G_exact);
@@ -37,13 +37,12 @@ else
     fprintf('判定: 闭环系统 G(s) 是不稳定的\n');
 end
 
-% --- 图1: 连续系统 G(s) 综合分析 (2×2 布局) ---
-figure('Name', '连续系统 G(s) 分析', 'Position', [50 50 1200 750]);
-
 % Bode 幅频与相频
 [mag_G, phase_G, w_G] = bode(G_exact);
 mag_G   = squeeze(mag_G);
 phase_G = squeeze(phase_G);
+
+figure('Name', '连续系统 G(s) 分析', 'Position', [50 50 1200 750]);
 
 subplot(2,2,1);
 semilogx(w_G, 20*log10(mag_G), 'b', 'LineWidth', 1.5);
@@ -57,13 +56,11 @@ xlabel('频率 (rad/s)'); ylabel('相位 (deg)');
 title(sprintf('G(s) Bode 相频 (Pm=%.2f°)', Pm));
 grid on;
 
-% Nyquist 图
 subplot(2,2,3);
 nyquist(G_exact);
 title('G(s) Nyquist 图');
 grid on;
 
-% 闭环阶跃响应 (Pade近似)
 subplot(2,2,4);
 step(T_cl_G, 20);
 title('G(s) 闭环阶跃响应 (Pade近似)');
@@ -73,7 +70,7 @@ grid on;
 sgtitle('连续系统 G(s) 频域与时域综合分析', 'FontSize', 14, 'FontWeight', 'bold');
 drawnow;
 
-%% ========== 第2部分: 离散系统 H(z) ==========
+%% 第2部分: 离散系统 H(z)
 fprintf('\n========== 第2部分: 离散系统 H(z) ==========\n');
 
 T_sample = 0.05;
@@ -108,12 +105,11 @@ else
     fprintf('判定: 离散闭环系统 H(z) 是不稳定的\n');
 end
 
-% --- 图2: 离散系统 H(z) 综合分析 (2×2 布局) ---
-figure('Name', '离散系统 H(z) 分析', 'Position', [100 100 1200 750]);
-
 [mag_H, phase_H, w_H] = bode(H_z);
 mag_H   = squeeze(mag_H);
 phase_H = squeeze(phase_H);
+
+figure('Name', '离散系统 H(z) 分析', 'Position', [100 100 1200 750]);
 
 subplot(2,2,1);
 semilogx(w_H, 20*log10(mag_H), 'b', 'LineWidth', 1.5);
