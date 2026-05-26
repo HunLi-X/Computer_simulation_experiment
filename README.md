@@ -3,7 +3,7 @@
 本仓库是计算机仿真课程实验代码与结果汇总，主要使用 MATLAB 完成基础建模、数值计算、图形绘制与控制系统分析。
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2023a+-orange)
-![实验数](https://img.shields.io/badge/实验-6-blue)
+![实验数](https://img.shields.io/badge/实验-7-blue)
 ![状态](https://img.shields.io/badge/状态-持续更新-green)
 
 ## 项目目标
@@ -12,6 +12,7 @@
 - 掌握符号计算、数值计算和常见误差分析
 - 学会二维/三维图形可视化与结果展示
 - 了解连续系统与离散系统的建模与分析方法
+- 掌握 Simulink 的编程式建模与仿真技术
 
 ## 目录结构
 
@@ -42,6 +43,11 @@
 └─ 实验六/
    ├─ README.md
    ├─ main01.m ~ main03.m
+   └─ res/
+└─ 实验八/
+   ├─ README.md
+   ├─ simlink.m
+   ├─ FourOrderODE_Simulation.slx
    └─ res/
 ```
 
@@ -101,6 +107,15 @@
 
 详情见：`实验六/README.md`
 
+### 实验八：Simulink 仿真建模
+
+- 编程式创建 Simulink 模型
+- 四阶微分方程模拟结构图分解
+- Integrator 串联降阶与负反馈实现
+- MATLAB 脚本自动生成与运行 Simulink 模型
+
+详情见：`实验八/README.md`
+
 ## 运行环境
 
 - MATLAB R2023a 或更高版本
@@ -131,6 +146,9 @@ main01
 
 cd ../实验六
 main01
+
+cd ../实验八
+simlink
 ```
 
 3. 查看各实验目录下的 `res/` 截图和 `README.md` 说明。
