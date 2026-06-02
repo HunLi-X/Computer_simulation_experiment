@@ -5,8 +5,8 @@
 
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2023a+-orange)
-![实验数](https://img.shields.io/badge/实验-7-blue)
-![状态](https://img.shields.io/badge/状态-持续更新-green)
+![实验数](https://img.shields.io/badge/实验-8-blue)
+![状态](https://img.shields.io/badge/状态-已完成-brightgreen)
 
 <p align="center">
   <a href="https://github.com/HunLi-X">
@@ -75,6 +75,11 @@
    ├─ simlink.m
    ├─ FourOrderODE_Simulation.slx
    └─ res/
+└─ 实验九/
+   ├─ README.md
+   ├─ myfirstsfcn.m
+   ├─ exp_sfcn.slx
+   └─ res/
 ```
 
 ## 实验内容总览
@@ -142,6 +147,15 @@
 
 详情见：`实验八/README.md`
 
+### 实验九：S-Function 编写与应用
+
+- Level-1 MATLAB S-Function 结构与回调机制
+- 连续状态方程在 S-Function 中的实现
+- S-Function 模块在 Simulink 中的集成与测试
+- 深入理解 Simulink 仿真引擎工作原理
+
+详情见：`实验九/README.md`
+
 ## 运行环境
 
 - MATLAB R2023a 或更高版本
@@ -175,6 +189,10 @@ main01
 
 cd ../实验八
 simlink
+
+cd ../实验九
+open_system('exp_sfcn')
+sim('exp_sfcn')
 ```
 
 3. 查看各实验目录下的 `res/` 截图和 `README.md` 说明。
