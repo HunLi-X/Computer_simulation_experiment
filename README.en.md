@@ -5,8 +5,8 @@
 
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2023a+-orange)
-![Labs](https://img.shields.io/badge/Labs-7-blue)
-![Status](https://img.shields.io/badge/Status-Active-green)
+![Labs](https://img.shields.io/badge/Labs-8-blue)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 <p align="center">
   <a href="https://github.com/HunLi-X">
@@ -76,6 +76,11 @@ lab/
    ├─ simlink.m
    ├─ FourOrderODE_Simulation.slx
    └─ res/
+└─ Lab 9/
+   ├─ README.md
+   ├─ myfirstsfcn.m
+   ├─ exp_sfcn.slx
+   └─ res/
 ```
 
 ## Lab Overview
@@ -143,6 +148,15 @@ See: `实验六/README.md`
 
 See: `实验八/README.md`
 
+### Lab 9: S-Function Development
+
+- Level-1 MATLAB S-Function structure and callback mechanism
+- Continuous state equation implementation in S-Function
+- S-Function module integration and testing in Simulink
+- Deep understanding of Simulink simulation engine
+
+See: `实验九/README.md`
+
 ## Environment
 
 - MATLAB R2023a or later
@@ -176,6 +190,10 @@ main01
 
 cd ../实验八
 simlink
+
+cd ../实验九
+open_system('exp_sfcn')
+sim('exp_sfcn')
 ```
 
 3. Check the `res/` folder and `README.md` in each lab for results and details.
