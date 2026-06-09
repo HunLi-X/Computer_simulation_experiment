@@ -5,7 +5,7 @@
 
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2023a+-orange)
-![Labs](https://img.shields.io/badge/Labs-8-blue)
+![Labs](https://img.shields.io/badge/Labs-9-blue)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 <p align="center">
@@ -77,9 +77,14 @@ lab/
    ├─ FourOrderODE_Simulation.slx
    └─ res/
 └─ Lab 9/
+│  ├─ README.md
+│  ├─ myfirstsfcn.m
+│  ├─ exp_sfcn.slx
+│  └─ res/
+└─ Lab 10/
    ├─ README.md
-   ├─ myfirstsfcn.m
-   ├─ exp_sfcn.slx
+   ├─ main01.m
+   ├─ main02.m
    └─ res/
 ```
 
@@ -157,6 +162,15 @@ See: `实验八/README.md`
 
 See: `实验九/README.md`
 
+### Lab 10: Step Response and PID Controller Comparison
+
+- Second-order unity negative feedback system modeling
+- Unit step response plotting and performance index extraction
+- P, PI, and PID controller design with closed-loop response comparison
+- Analysis of controller parameters on system dynamic performance
+
+See: `实验十/README.md`
+
 ## Environment
 
 - MATLAB R2023a or later
@@ -194,6 +208,10 @@ simlink
 cd ../实验九
 open_system('exp_sfcn')
 sim('exp_sfcn')
+
+cd ../实验十
+main01
+main02
 ```
 
 3. Check the `res/` folder and `README.md` in each lab for results and details.

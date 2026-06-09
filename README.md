@@ -5,7 +5,7 @@
 
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2023a+-orange)
-![实验数](https://img.shields.io/badge/实验-8-blue)
+![实验数](https://img.shields.io/badge/实验-9-blue)
 ![状态](https://img.shields.io/badge/状态-已完成-brightgreen)
 
 <p align="center">
@@ -76,9 +76,14 @@
 │  ├─ FourOrderODE_Simulation.slx
 │  └─ res/
 └─ 实验九/
+│  ├─ README.md
+│  ├─ myfirstsfcn.m
+│  ├─ exp_sfcn.slx
+│  └─ res/
+└─ 实验十/
    ├─ README.md
-   ├─ myfirstsfcn.m
-   ├─ exp_sfcn.slx
+   ├─ main01.m
+   ├─ main02.m
    └─ res/
 ```
 
@@ -156,6 +161,15 @@
 
 详情见：`实验九/README.md`
 
+### 实验十：控制系统阶跃响应与 PID 控制器比较
+
+- 二阶系统单位负反馈闭环建模
+- 单位阶跃响应曲线绘制与性能指标提取
+- P、PI、PID 控制器设计与闭环响应比较
+- 控制器参数对系统动态性能的影响分析
+
+详情见：`实验十/README.md`
+
 ## 运行环境
 
 - MATLAB R2023a 或更高版本
@@ -193,6 +207,10 @@ simlink
 cd ../实验九
 open_system('exp_sfcn')
 sim('exp_sfcn')
+
+cd ../实验十
+main01
+main02
 ```
 
 3. 查看各实验目录下的 `res/` 截图和 `README.md` 说明。
